@@ -8,7 +8,7 @@
             "40": "icon_40b.png"
         },
         "default_title": "PassLok",
-        "default_popup": "index.html"
+        "default_popup": "src/interface.js"
     },
     "content_scripts": [
         {
@@ -47,7 +47,7 @@
     "content_security_policy": "script-src 'self' https://*.firebaseio.com; object-src 'self'",
     "default_locale": "en",
     "description": "PassLok is a toolkit that implements public key cryptography and steganography to supplement ANY communications program.",
-    "options_page": " http://passlok.weebly.com/uploads/2/4/1/8/24187628/passlok_manual.pdf",
+    "options_page": "help.html",
     "permissions": [
         "*://*/*",
         "storage",
@@ -63,11 +63,13 @@
     ],
     "background": {
         "page": "background.html",
-        "persistent": true
+        "persistent": false
     },
     "icons": {
-        "16": "icon_16b.png",
+        "16": "faviconb.ico",
+        "40": "icon_40b.png",
         "48": "icon_48b.png",
+        "64": "icon_64b.png",
         "128": "icon_128b.png"
     },
     "minimum_edge_version": "33.14281.1000.0",
