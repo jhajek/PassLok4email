@@ -5,13 +5,13 @@
 	xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
 	IgnorableNamespaces="uap3">
 	<Identity 
-		Name="INSERT-YOUR-PACKAGE-IDENTITY-NAME-HERE" 
-		Publisher="CN=INSERT-YOUR-PACKAGE-IDENTITY-PUBLISHER-HERE" 
-		Version="{Version}" /> <!-- UPDATE IDENTITY -->
+		Name="EDGELOK" 
+		Publisher="CN=EDGELOK" 
+		Version="1.0.5.0" /> <!-- UPDATE IDENTITY -->
 
 	<Properties> 
-		<DisplayName>{DisplayName}</DisplayName> 
-		<PublisherDisplayName>INSERT-YOUR-PACKAGE-PROPERTIES-PUBLISHERDISPLAYNAME-HERE</PublisherDisplayName> <!-- UPDATE PLUBLISHER DISPLAY NAME -->
+		<DisplayName>PassLok for Edge manifest</DisplayName> 
+		<PublisherDisplayName>EDGELOKCO</PublisherDisplayName> <!-- UPDATE PLUBLISHER DISPLAY NAME -->
 		<Logo>Assets\StoreLogo.png</Logo> 
 	</Properties> 
 
@@ -20,17 +20,17 @@
 	</Dependencies> 
 
 	<Resources>
-		{Resources}
+		<Resource Language="en" />
 	</Resources> 
 
 	<Applications> 
 		<Application Id="App">
 			<uap:VisualElements
 				AppListEntry="none"
-				DisplayName="{DisplayName}"
+				DisplayName="PassLok for Edge manifest"
 				Square150x150Logo="Assets\Square150x150Logo.png"
         		Square44x44Logo="Assets\Square44x44Logo.png"
-				Description="{Description}"
+				Description="PassLok is a toolkit that implements public key cryptography and steganography to supplement ANY communications program."
 				BackgroundColor="transparent">
 			</uap:VisualElements>
 			<Extensions>
@@ -39,10 +39,12 @@
 						Name="com.microsoft.edge.extension"
 						Id="EdgeExtension"
 						PublicFolder="Extension"
-						DisplayName="{DisplayName}">
+						DisplayName="PassLok for Edge manifest">
 						<uap3:Properties>
 							<Capabilities>
-								{Capabilities}
+								<Capability Name="websiteContent"/>
+								<Capability Name="storage"/>
+								<Capability Name="tabs"/>
 							</Capabilities>
 						</uap3:Properties>
 					</uap3:AppExtension>

@@ -11,40 +11,40 @@
         "default_popup": "index.html"
     },
     "content_scripts": [
- {
-    "matches":[
-	    "https://mail.google.com/*",
-		 "http://mail.google.com/*",
-		 "http://*.mail.yahoo.com/*",
-		 "https://*.mail.yahoo.com/*",
-		 "http://*.live.com/*",
-		 "https://*.live.com/*"
-	],
-    "css": [
-		"lib/jquery-ui.min.css",
-		"src/interface.css"
-	],
-    "js": [
-		"lib/jquery-2.2.2.min.js",
-		"lib/jquery-ui.min.js",
-		"lib/nacl.js",
-		"lib/ed2curve.js",
-		"lib/scrypt-async.js",
-		"lib/lz-string.js",
-		"src/interface.js",
-		"src/crypto.js",
-		"src/dictionary_en.js",
-		"src/chat.js",
-		"src/keylock.js",
-		"src/localdir.js",
-		"src/switching.js",
-		"src/stego.js"
-	],
-    "run_at":"document_idle",
-    "all_frames":true
-}
+        {
+            "matches": [
+                "https://mail.google.com/*",
+                "http://mail.google.com/*",
+                "http://*.mail.yahoo.com/*",
+                "https://*.mail.yahoo.com/*",
+                "http://*.live.com/*",
+                "https://*.live.com/*"
+            ],
+            "css": [
+                "lib/jquery-ui.min.css",
+                "src/interface.css"
+            ],
+            "js": [
+                "lib/jquery-2.2.2.min.js",
+                "lib/jquery-ui.min.js",
+                "lib/nacl.js",
+                "lib/ed2curve.js",
+                "lib/scrypt-async.js",
+                "lib/lz-string.js",
+                "src/interface.js",
+                "src/crypto.js",
+                "src/dictionary_en.js",
+                "src/chat.js",
+                "src/keylock.js",
+                "src/localdir.js",
+                "src/switching.js",
+                "src/stego.js"
+            ],
+            "run_at": "document_idle",
+            "all_frames": true
+        }
     ],
-    "content_security_policy": "script-src 'self'; object-src 'self'",
+    "content_security_policy": "script-src 'self' https://*.firebaseio.com; object-src 'self'",
     "default_locale": "en",
     "description": "PassLok is a toolkit that implements public key cryptography and steganography to supplement ANY communications program.",
     "options_page": " http://passlok.weebly.com/uploads/2/4/1/8/24187628/passlok_manual.pdf",
@@ -52,19 +52,18 @@
         "*://*/*",
         "storage",
         "tabs",
-    "https://mail.google.com/*",
-    "http://mail.google.com/*",
-    "https://google.com/*",
-    "http://google.com/*",
-	"http://*.mail.yahoo.com/*",
-	"https://*.mail.yahoo.com/*",
-	"http://*.live.com/*",
-	"https://*.live.com/*"
+        "https://mail.google.com/*",
+        "http://mail.google.com/*",
+        "https://google.com/*",
+        "http://google.com/*",
+        "http://*.mail.yahoo.com/*",
+        "https://*.mail.yahoo.com/*",
+        "http://*.live.com/*",
+        "https://*.live.com/*"
     ],
     "background": {
-	"scripts": [
-		"src/background.js"
-	]
+        "page": "background.html",
+        "persistent": true
     },
     "icons": {
         "16": "icon_16b.png",
@@ -74,14 +73,12 @@
     "minimum_edge_version": "33.14281.1000.0",
     "web_accessible_resources": [
         "icon_48b.png",
-        "web_accessible_resources": [
-	"lib/images/ui-icons_222222_256x240.png",
-	"lib/images/ui-icons_555555_256x240.png",
-	"lib/images/ui-icons_777777_256x240.png",
-	"lib/images/ui-icons_ef8c08_256x240.png",
-	"lib/images/ui-bg_glass_100_f6f6f6_1x400.png",
-	"lib/images/ui-bg_diagonals-thick_20_666666_40x40.png"
-    ]
+        "lib/images/ui-icons_222222_256x240.png",
+        "lib/images/ui-icons_555555_256x240.png",
+        "lib/images/ui-icons_777777_256x240.png",
+        "lib/images/ui-icons_ef8c08_256x240.png",
+        "lib/images/ui-bg_glass_100_f6f6f6_1x400.png",
+        "lib/images/ui-bg_diagonals-thick_20_666666_40x40.png"
     ],
     "-ms-preload": {
         "backgroundScript": "backgroundScriptsAPIBridge.js",
